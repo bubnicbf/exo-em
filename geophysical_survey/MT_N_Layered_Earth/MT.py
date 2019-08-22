@@ -59,7 +59,7 @@ def top(thick):
 #Propagation Matrix
 def PropagationMatrixUD(z1,z2,h,k): 
     
-    tran = np.matrix([[np.exp(-1.j*k*h),0.],[0.,np.exp(-1.j*k*h)]],dtype='complex_')
+    tran = np.matrix([[np.exp(-1.j*k*h),0.],[0.,np.exp(1.j*k*h)]],dtype='complex_')
     
     prop2 = np.matrix([[1.,1,],[-1./z2,1./z2]],dtype='complex_')
     
@@ -570,11 +570,3 @@ def PlotAppRes3LayersInteract(h1,h2,sigl1,sigl2,sigl3,mul1,mul2,mul3,epsl1,epsl2
     thick3[2]=h2
     
     PlotAppRes(frangn,thick3,sig3,chg3_0,taux3,c3,mu3,eps3,3,F_Envelope,PlotEnvelope)
-    
-
-    
-       
-    
-    
-
-
